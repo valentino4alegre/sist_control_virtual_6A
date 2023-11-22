@@ -1,0 +1,69 @@
+<html>
+<head>
+<script type="text/javascript">
+<!--
+var r;
+var resultXl;
+var resultXc;
+
+function Xl(l, f) {
+    return 2 * 3.14 * f * l;
+}
+
+function Xc(c, f) {
+    return 1 / (2 * 3.14 * f * c);
+}
+
+function Z(R, resultXl, resultXc) {
+    function square(x) {
+        return x * x;
+    }
+    return Math.sqrt(square(r) + square(resultXl - resultXc));
+}
+
+function radianesAGrados(radianes) {
+    return radianes * (180 / Math.PI);
+}
+
+function Phi(R, resultXl, resultXc) {
+    return radianesAGrados(Math.atan((resultXl - resultXc) / R));
+}
+
+function real(resultZ, resultXl, resultXc) {
+    return Math.cos(Phi(r, resultXl, resultXc) * (Math.PI / 180)) * resultZ;
+}
+
+function imag(resultZ, resultXl, resultXc) {
+    return Math.sin(Phi(r, resultXl, resultXc) * (Math.PI / 180)) * resultZ;
+}
+
+function prueba() {
+    r = parseFloat(prompt("Resistencia de:"));
+    var l = parseFloat(prompt("Bobina de:"));
+    var c = parseFloat(prompt("Capacitor de:"));
+    var f = parseFloat(prompt("Frecuencia de:"));
+
+    resultXl = Xl(l, f);
+    document.write("Xl:" + resultXl + "<br>");
+    resultXc = Xc(c, f);
+    document.write("Xc:" + resultXc + "<br>");
+    var resultZ = Z(r, resultXl, resultXc);
+    document.write("Z:" + resultZ + "<br>");
+    var resultPhi = Phi(r, resultXl, resultXc);
+    document.write("Phi:" + resultPhi + "<br>");
+    var resultReal = real(resultZ, resultXl, resultXc);
+    document.write("Parte real de Z:" + resultReal + "<br>");
+    var resultImag = imag(resultZ, resultXl, resultXc);
+    document.write("Parte imaginaria de Z:" + resultImag + "<br>");
+}
+//-->
+</script>
+</head>
+<body>
+<p>Resultado</p>
+<form>
+<input type="button" onclick="prueba()" value="Llamar Funciones">
+</form>
+ <a href="index.html"> volver </a>
+</body>
+</html>

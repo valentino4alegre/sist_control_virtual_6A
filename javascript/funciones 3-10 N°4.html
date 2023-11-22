@@ -1,0 +1,28 @@
+<html>
+<head>
+<script type="text/javascript">
+<!--
+function esTriangulo(a, b, c){
+	return (a + b > c) && (a + c > b) && (b + c > a);
+}
+function secondFunction(){
+	var a = 20;
+	var b = 20;
+	var c = 20;
+	
+	if (esTriangulo(a, b, c)){
+	document.write("Es un triángulo");}
+	else{
+	document.write("No es un triángulo");}
+}
+//-->
+</script>
+</head>
+<body>
+<p>Es o no es un triángulo???</p>
+<form>
+<input type="button" onclick="secondFunction()" value="Llamar funciones">
+</form>
+	<a href="index.html"> volver </a>
+</body>
+</html>

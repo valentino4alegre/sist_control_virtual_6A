@@ -1,0 +1,40 @@
+<html>
+<head>
+<script type="text/javascript">
+<!--
+var m;
+var h;
+var g;
+m=prompt("Ingrese masa en Kg:");
+h=prompt("Ingrese altura en metros:");
+g=9.8
+function EP(m, h, g){
+	return m*h*g;
+}
+function Vel(h, g){
+	return Math.sqrt(2*(g)*(h));
+}
+function secondFunction(){
+	var resultEP;
+	var resultVel;
+	resultEP = EP(m, h, g);
+	resultVel = Vel(h, g);
+	resultEP = resultEP.toFixed(2);
+    resultVel = resultVel.toFixed(2);
+	document.write("Energía Potencial de:"+resultEP+" Julios"+"<br>");
+	if (resultVel>100){
+		document.write("Tiene una velocidad de:"+resultVel+" ,es muy rápido,WOW");}
+	else{
+		document.write("Tiene una velocidad de:"+resultVel+" m/s,es lento...JAJA");}
+}
+//-->
+</script>
+</head>
+<body>
+<p>Resultados</p>
+<form>
+<input type="button" onclick="secondFunction()" value="Llamar Funciones">
+</form>
+<a href="index.html"> volver </a>
+</body>
+</html>

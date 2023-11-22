@@ -1,0 +1,36 @@
+<html>
+<head>
+<script type="text/javascript">
+<!--
+function hipotenusa(a, b){
+	function square(x){ return x*x; }
+	return Math.sqrt(square(a) + square(b));
+}
+function perimetro(a, b){
+	return a + b + hipotenusa(a, b);
+}
+function area(a, b){
+	return (a * b)/2;
+}
+function secondFunction(){
+	var result1;
+	var result2;
+	var result3;
+	result1 = hipotenusa(5, 7);
+	result2 = perimetro(5, 7);
+	result3 = area(5, 7);
+	document.write ( result1 + "<br>");
+	document.write ( result2 + "<br>");
+	document.write ( result3 + "<br>");
+}
+//-->
+</script>
+</head>
+<body>
+<p>Resultados</p>
+<form>
+<input type="button" onclick="secondFunction()" value="Llamar funciones">
+</form>
+	<a href="index.html"> volver </a>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<body>
+<script language="javascript" type="text/javascript">
+function calculoIMC() {
+	var peso=(prompt("ingreso peso"));
+	var altura=(prompt("ingreso altura"));
+	var IMC=(peso/(altura*altura));
+
+	if(IMC>30)
+		alert ("SALI A MOVER LAS CACHAS TENES OBESIDAD GRADO 2="+IMC);
+	else if(IMC>25)
+		alert ("sali a correr que tenes obesidad grado 1="+IMC);
+	else if(IMC>17.9)
+		alert ("estas perfecto bro segui asi="+IMC);
+	else if(IMC<17.8)
+		alert ("¿que sos vegano pelotudo? empeza a comer que estas debajo del peso minimo="+IMC);
+
+
+}
+</script>
+<input type="button" onclick=calculoIMC() Value="CalcularIMC"/>
+ <a href="index.html"> volver </a>
+</body>
+</html>
