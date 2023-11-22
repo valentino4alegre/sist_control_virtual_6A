@@ -1,0 +1,120 @@
+<html>
+<head>
+  <title>Formulario CV</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 10px;
+    }
+    .form-container {
+      max-width: 500px;
+      margin: 0 auto;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+    select[multiple] {
+      height: auto;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Rellena tu CV</h1>
+    <h2>Datos personales</h2>
+    <form>
+      <label for="provincia">Provincia:</label>
+      <select id="provincia" name="provincia">
+        <option value="Buenos Aires">Buenos Aires</option>
+        <option value="Catamarca">Catamarca</option>
+        <option value="Chaco">Chaco</option>
+        <option value="Chubut">Chubut</option>
+        <option value="Córdoba">Córdoba</option>
+        <option value="Corrientes">Corrientes</option>
+        <option value="Entre Ríos">Entre Ríos</option>
+        <option value="Formosa">Formosa</option>
+        <option value="Jujuy">Jujuy</option>
+        <option value="La Pampa">La Pampa</option>
+        <option value="La Rioja">La Rioja</option>
+        <option value="Mendoza">Mendoza</option>
+        <option value="Misiones">Misiones</option>
+        <option value="Neuquén">Neuquén</option>
+        <option value="Río Negro">Río Negro</option>
+        <option value="Salta">Salta</option>
+        <option value="San Juan">San Juan</option>
+        <option value="San Luis">San Luis</option>
+        <option value="Santa Cruz">Santa Cruz</option>
+        <option value="Santa Fe">Santa Fe</option>
+        <option value="Santiago del Estero">Santiago del Estero</option>
+        <option value="Tierra del Fuego">Tierra del Fuego</option>
+        <option value="Tucumán">Tucumán</option>
+      </select>
+
+      <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+      <div>
+        <input type="number" id="dia" name="dia" placeholder="Día" min="1" max="31">
+        <select id="mes" name="mes">
+          <option value="enero">Enero</option>
+          <option value="febrero">Febrero</option>
+          <option value="marzo">Marzo</option>
+          <option value="abril">Abril</option>
+          <option value="mayo">Mayo</option>
+          <option value="junio">Junio</option>
+          <option value="julio">Julio</option>
+          <option value="agosto">Agosto</option>
+          <option value="septiembre">Septiembre</option>
+          <option value="octubre">Octubre</option>
+          <option value="noviembre">Noviembre</option>
+          <option value="diciembre">Diciembre</option>
+        </select>
+        <input type="text" id="anio" name="anio" placeholder="Año">
+      </div>
+
+      <label for="temas-interes">Temas de interés:</label>
+      <select id="temas-interes" name="temas-interes" multiple>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="javascript">JavaScript</option>
+        <option value="python">Python</option>
+        <option value="web-design">Diseño web</option>
+        <!-- Agrega más opciones según los temas de interés que desees -->
+      </select>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+   <a href="index.html"> volver </a>
+</body>
+</html>

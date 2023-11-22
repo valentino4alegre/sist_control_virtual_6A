@@ -1,0 +1,93 @@
+<html>
+<head>
+  <title>Formulario de Información sobre el producto</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1, h2 {
+      color: #333;
+    }
+
+    form {
+      width: 400px;
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input[type="text"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    select {
+      height: 30px;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Información sobre el producto</h1>
+  <h2>Datos básicos</h2>
+
+  <form action="procesar_formulario.php" method="post" enctype="multipart/form-data">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="descripcion">Descripción:</label>
+    <textarea id="descripcion" name="descripcion" required></textarea>
+
+    <label for="foto">Foto:</label>
+    <input type="file" id="foto" name="foto" accept="image/*">
+
+    <label for="contador">Añadir contador de visitas:</label>
+    <input type="checkbox" id="contador" name="contador">
+
+    <h2>Datos económicos</h2>
+
+    <label for="precio">Precio (€):</label>
+    <input type="number" id="precio" name="precio" required>
+
+    <label for="impuestos">Impuestos:</label>
+    <select id="impuestos" name="impuestos">
+      <option value="4">4%</option>
+      <option value="7">7%</option>
+      <option value="16">16%</option>
+      <option value="25">25%</option>
+    </select>
+
+    <label for="promocion">Promoción:</label>
+    <select id="promocion" name="promocion">
+      <option value="ninguno">Ninguno</option>
+      <option value="transporte">Transporte gratuito</option>
+      <option value="descuento">Descuento 5%</option>
+    </select>
+
+    <input type="submit" value="Enviar">
+  </form>
+   <a href="index.html"> volver </a>
+</body>
+</html>

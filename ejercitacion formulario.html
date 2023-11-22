@@ -1,0 +1,66 @@
+<html>
+<head>
+  <title>Rellena tu CV</title>
+</head>
+<body>
+  <h1>Rellena tu CV</h1>
+  <form>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" maxlength="30" required><br><br>
+
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" name="apellido" maxlength="80" required><br><br>
+
+    <label for="contrasena">Contrasena:</label>
+    <input type="password" id="contrasena" name="contrasena" maxlength="10" required><br><br>
+
+    <label for="dni">DNI:</label>
+    <input type="text" id="dni" name="dni" maxlength="8" required><br><br>
+
+    <label for="sexo">Sexo:</label>
+    <select id="sexo" name="sexo" required>
+      <option value="hombre">Hombre</option>
+      <option value="mujer">Mujer</option>
+    </select><br><br>
+
+    <label for="foto">Incluir mi foto:</label>
+    <input type="file" id="foto" name="foto"><br><br>
+
+    <label for="suscripcion">Suscribirme al boletin de novedades:</label>
+    <input type="checkbox" id="suscripcion" name="suscripcion" onchange="mostrarEmail()"><br><br>
+
+    <div id="emailContainer" style="display: none;">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"><br><br>
+    </div>
+
+    <input type="submit" value="Guardar cambios">
+    <input type="button" value="Borrar los datos introducidos" onclick="borrarDatos()">
+  </form>
+
+  <script>
+    function mostrarEmail() {
+      var emailContainer = document.getElementById("emailContainer");
+      var suscripcionCheckbox = document.getElementById("suscripcion");
+
+      if (suscripcionCheckbox.checked) {
+        emailContainer.style.display = "block";
+      } else {
+        emailContainer.style.display = "none";
+      }
+    }
+
+    function borrarDatos() {
+      document.getElementById("nombre").value = "";
+      document.getElementById("apellido").value = "";
+      document.getElementById("contraseña").value = "";
+      document.getElementById("dni").value = "";
+      document.getElementById("sexo").selectedIndex = 0;
+      document.getElementById("foto").value = "";
+      document.getElementById("suscripcion").checked = false;
+      document.getElementById("email").value = "";
+    }
+  </script>
+   <a href="index.html"> volver </a>
+</body>
+</html>
